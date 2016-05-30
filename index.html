@@ -15,13 +15,13 @@ $(function () {
 });
 
 function begin_alarm() {
-  set_picture("http://science-all.com/images/wallpapers/rainbow-picture/rainbow-picture-5.png");
+  set_picture("rainbow-picture-5.png");
   $('#input').hide();
   setTimeout(end_alarm, $('#minutes').val() * 60 * 1000);
 }
 
 function end_alarm() {
-  set_picture("http://www.hotel-r.net/im/hotel/lv/house-24.png");
+  set_picture("house-24.png");
 }
 
 function set_picture(url) {  
