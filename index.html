@@ -1,1 +1,32 @@
-hello world
+<body style="background-color: blue">
+<div id="input">
+  <input id="minutes" style="font-size:4em"/>
+  <button type="button" onclick="javascript:begin_alarm()"><span style="font-size:4em">nap</span></button>
+</div>
+
+<img id="background" width="100%" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+$(function () {
+	// setTimeout(begin_alarm, 1000);
+	// setTimeout(end_alarm, 3000);
+});
+
+function begin_alarm() {
+  set_picture("http://science-all.com/images/wallpapers/rainbow-picture/rainbow-picture-5.png");
+  $('#input').hide();
+  setTimeout(end_alarm, $('#minutes').val() * 60 * 1000);
+}
+
+function end_alarm() {
+  set_picture("http://www.hotel-r.net/im/hotel/lv/house-24.png");
+}
+
+function set_picture(url) {  
+  $('#background').attr('src', url);
+}
+</script>
+
+</body>
